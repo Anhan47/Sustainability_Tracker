@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sustainability Tracker</h1>
+        </header>
+
+        <!-- Environmental Sustainability -->
+        <section class="category">
+            <h2>Environmental Sustainability</h2>
+            <form id="environmentalForm">
+                <div class="input-group">
+                    <label for="electricity">Electricity Usage (kWh)</label>
+                    <input type="number" id="electricity" required>
+                </div>
+                <div class="input-group">
+                    <label for="water">Water Usage (Liters)</label>
+                    <input type="number" id="water" required>
+                </div>
+                <div class="input-group">
+                    <label for="waste">Waste Generated (kg)</label>
+                    <input type="number" id="waste" required>
+                </div>
+                <button type="submit">Submit Environmental Data</button>
+            </form>
+            <div id="environmentalData" class="data-display"></div>
+            <div class="chart-container">
+                <canvas id="environmentalChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Social Sustainability -->
+        <section class="category">
+            <h2>Social Sustainability</h2>
+            <form id="socialForm">
+                <div class="input-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" name="studentName" maxlength="100" required>
+                </div>
+                <div class="input-group">
+                    <label for="studentWellbeing">Student Well-being Score (1-10)</label>
+                    <input type="number" id="studentWellbeing" min="1" max="10" required>
+                </div>
+                <div class="input-group">
+                    <label for="communityEvents">Community Events Organized</label>
+                    <input type="number" id="communityEvents" required>
+                </div>
+                <div class="input-group">
+                    <label for="participation">Student Participation Rate (%)</label>
+                    <input type="number" id="participation" min="0" max="100" required>
+                </div>
+                <button type="submit">Submit Social Data</button>
+            </form>
+            <div id="socialData" class="data-display"></div>
+            <div class="chart-container">
+                <canvas id="socialChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Economic Sustainability -->
+        <section class="category">
+            <h2>Economic Sustainability</h2>
+            <form id="economicForm">
+                <div class="input-group">
+                    <label for="greenProcurement">Green Procurement (%)</label>
+                    <input type="number" id="greenProcurement" min="0" max="100" required>
+                </div>
+                <div class="input-group">
+                    <label for="operationalCost">Operational Cost ($)</label>
+                    <input type="number" id="operationalCost" required>
+                </div>
+                <div class="input-group">
+                    <label for="energySavings">Energy Cost Savings ($)</label>
+                    <input type="number" id="energySavings" required>
+                </div>
+                <button type="submit">Submit Economic Data</button>
+            </form>
+            <div id="economicData" class="data-display"></div>
+            <div class="chart-container">
+                <canvas id="economicChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Education and Awareness -->
+        <section class="category">
+            <h2>Education and Awareness</h2>
+            <form id="educationForm">
+                <div class="input-group">
+                    <label for="resourceTitle">Resource Title</label>
+                    <input type="text" id="resourceTitle" required>
+                </div>
+                <div class="input-group">
+                    <label for="resourceType">Resource Type</label>
+                    <select id="resourceType" required>
+                        <option value="article">Article</option>
+                        <option value="video">Video</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="report">Report</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="resourceDescription">Description</label>
+                    <textarea id="resourceDescription" required></textarea>
+                </div>
+                <button type="submit">Submit Educational Resource</button>
+            </form>
+            <div id="educationData" class="data-display"></div>
+            <div class="chart-container">
+                <canvas id="educationChart"></canvas>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
